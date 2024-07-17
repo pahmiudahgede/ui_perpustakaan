@@ -21,8 +21,7 @@ if (isset($_POST['submit'])) {
         if ($result) {
             mysqli_stmt_close($stmt);
             mysqli_close($conn);
-            header("Location: index.php"); // Redirect ke halaman utama setelah berhasil disimpan
-
+            header("Location: index.php");
         } else {
             echo "Gagal mengeksekusi query.";
             mysqli_stmt_close($stmt);
@@ -33,6 +32,5 @@ if (isset($_POST['submit'])) {
         mysqli_close($conn);
     }
 } else {
-    header("Location: edit.php"); // Redirect kembali ke halaman edit jika tidak ada data yang disubmit
-
+    header("Location: edit.php");
 }
